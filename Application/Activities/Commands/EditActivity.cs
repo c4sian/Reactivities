@@ -1,5 +1,6 @@
 using System;
 using AutoMapper;
+using Domain;
 using MediatR;
 using Persistence;
 
@@ -9,7 +10,7 @@ public class EditActivity
 {
     public class Command : IRequest
     {
-        public required Domain.Activity Activity { get; set; }
+        public required Activity Activity { get; set; }
     }
 
     public class Handler(AppDbContext context, IMapper mapper) : IRequestHandler<Command>
