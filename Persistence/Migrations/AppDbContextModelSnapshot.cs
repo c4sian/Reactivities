@@ -89,8 +89,9 @@ namespace Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<sbyte>("Url")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("Url")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("UserId")
                         .IsRequired()

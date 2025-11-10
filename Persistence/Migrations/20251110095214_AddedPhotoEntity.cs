@@ -5,7 +5,7 @@
 namespace Persistence.Migrations
 {
     /// <inheritdoc />
-    public partial class PhotoEntityAdded : Migration
+    public partial class AddedPhotoEntity : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -15,7 +15,7 @@ namespace Persistence.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "TEXT", nullable: false),
-                    Url = table.Column<sbyte>(type: "INTEGER", nullable: false),
+                    Url = table.Column<string>(type: "TEXT", nullable: false),
                     PublicId = table.Column<string>(type: "TEXT", nullable: false),
                     UserId = table.Column<string>(type: "TEXT", nullable: false)
                 },

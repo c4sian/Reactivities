@@ -11,8 +11,8 @@ using Persistence;
 namespace Persistence.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20251109183634_PhotoEntityAdded")]
-    partial class PhotoEntityAdded
+    [Migration("20251110095214_AddedPhotoEntity")]
+    partial class AddedPhotoEntity
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -92,8 +92,9 @@ namespace Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<sbyte>("Url")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("Url")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("UserId")
                         .IsRequired()
